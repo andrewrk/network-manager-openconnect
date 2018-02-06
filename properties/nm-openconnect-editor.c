@@ -226,6 +226,11 @@ init_protocol_combo_options (GtkComboBox *protocol_combo)
 					   0, _("Juniper/Pulse Network Connect"),
 					   1, "nc",
 					   -1);
+	gtk_list_store_append(protocol_combo_list, &iter);
+	gtk_list_store_set(protocol_combo_list, &iter,
+					   0, _("GlobalProtect"),
+					   1, "gp",
+					   -1);
 	return TRUE;
 #else
 	return FALSE;
